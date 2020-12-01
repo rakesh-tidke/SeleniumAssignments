@@ -19,7 +19,7 @@ public class DropdownTest {
 	String url = "https://www.jquery-az.com/boots/demo.php?ex=63.0_2";
 	
 	@Before
-	public void windowSetup() {
+	public void windowSetup() throws Exception{
 		
 		System.setProperty("webdriver.chrome.driver", "D:\\RAKESH\\Infosys\\ChromeDriver\\chromedriver.exe");
 		
