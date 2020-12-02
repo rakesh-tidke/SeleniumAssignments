@@ -40,8 +40,9 @@ public class GoogleSearchTest {
 		List<WebElement> result = driver.findElements(By.xpath("//ul[@class='erkvQe']//li"));
 		
 		for(int i= 0; i < result.size(); i++) {
-			
+	
 			String value = result.get(i).getText();
+			System.out.println(value);
 			
 			if(value == "selenium webdriver") {
 				
@@ -51,6 +52,9 @@ public class GoogleSearchTest {
 			}
 		}
 		
+		
 	}
 
 }
+
+
