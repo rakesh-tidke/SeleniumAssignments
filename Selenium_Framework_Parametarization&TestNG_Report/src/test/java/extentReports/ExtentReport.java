@@ -1,4 +1,4 @@
-package dataProvider;
+package extentReports;
 
 import org.junit.After;
 import org.junit.Before;
