@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeTest;
 
 public class Testng {
 	@Test(dataProvider = "data")
-	public void f(Integer JerseyNo, String FirstName,String LastName) throws IOException {
+	public void test (Integer JerseyNo, String FirstName,String LastName) throws IOException {
 		System.out.println("******** FC Bayern Team ********");
 		System.out.println("Player No "+JerseyNo);
 		System.out.println(FirstName);
