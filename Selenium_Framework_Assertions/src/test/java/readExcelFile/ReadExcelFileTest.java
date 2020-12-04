@@ -33,7 +33,7 @@ public class ReadExcelFileTest {
 		int rowCount = sheet.getPhysicalNumberOfRows();
 		System.out.println("Row Count = "+ rowCount);
 
-		for(int i=1; i <= rowCount; i++) {
+		for(int i=1; i < rowCount; i++) {
 
 			int JerseyNo = (int) sheet.getRow(i).getCell(0).getNumericCellValue();
 			String FirstName = sheet.getRow(i).getCell(1).getStringCellValue();
