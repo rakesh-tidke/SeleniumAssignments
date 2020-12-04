@@ -3,7 +3,6 @@ package verifyPincodes;
 import java.util.List;
 
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -32,45 +31,33 @@ public class VerifyPincodesTest {
 		driver.quit();
 	}
 
-	//work in progress
 	@Test
 	public void test() {
 
 		WebElement table = driver.findElement(By.xpath("/html/body/table/tbody/tr[3]/td[2]/table[1]/tbody"));
 		List<WebElement> rows = table.findElements(By.tagName("tr"));
 		for (int i = 3; i < rows.size(); i++) {
-			List<WebElement> cols = rows.get(i).findElements(By.tagName("td"));
-			String pinCode1 = cols.get(2).getText();
+			List<WebElement> columns = rows.get(i).findElements(By.tagName("td"));
+			String pinCode1 = columns.get(2).getText();
 			for (int j = i; j < rows.size(); j++) {
-				String pinCode2 = cols.get(2).getText();
-				Assert.assertFalse(pinCode1 == pinCode2); 
+				String pinCode2 = columns.get(2).getText();
+				if(pinCode1 == pinCode2) {
+					System.out.println("Same Pincode Pincode1 = "+pinCode1+" and Pincode2 = "+ pinCode2);
+					break;
+				}
+				System.out.println("j = "+j);
 			}
-			System.out.println(i);
+			System.out.println("i = "+i);
+			
 			if (i == 100) {
 				break;
 			}
 		}
 
-
 	}
-	
-	 
 	
 }
 
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
